@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>店舗予約フォーム</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="form.js"></script>
+    </head>
+    <body>
+        <div class="form-container">
+            <p class="required-note">*は必須項目</p>
+            <form id="reservationForm">
+                <div class="form-field">
+                    <label for="lastName">姓<span class="required">*</span></label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-field">
+                    <label for="firstName">名<span class="required">*</span></label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-field">
+                    <label for="numberOfGuests">来店人数<span class="required">*</span></label>
+                    <input type="number" id="numberOfGuests" name="numberOfGuests" required min="1" value="1">
+                </div>
+                <div class="form-field">
+                    <label>来店時刻<span class="required">*</span></label>
+                    <div id="arrivalTimeOptions" class="radio-options">
+                    </div>
+                  </div>
+                <div class="form-field">
+                    <label for="notes">備考</label>
+                    <textarea id="notes" name="notes"></textarea>
+                </div>
+                <div class="form-field">
+                    <button type="submit" disabled>予約する</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
