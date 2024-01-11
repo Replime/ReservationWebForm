@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 2em auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-field {
+    margin-bottom: 15px;
+  }
+  
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-field input, .form-field select, .form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-field input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+  .form-field input[type="number"]::-webkit-outer-spin-button,
+  .form-field input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .form-field textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .form-field button {
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .form-field button:hover {
+    background-color: #4cae4c;
+  }
+
+  .form-field button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .required {
+    color: red;
+  }
+  
+  .required-note {
+    color: red;
+    font-size: 0.8em;
+    margin-bottom: 15px;
+  }
+
+  .radio-options {
+    margin-top: 5px;
+}
+  
+.radio-container {
+    display: flex;
+    align-items: center; /* アイテムを縦方向の中央に配置 */
+    justify-content: flex-start; /* アイテムを水平方向の左に配置 */
+    margin-bottom: 5px; /* 下の余白を設定 */
+}
+  
+/* ラジオボタンに対するスタイル */
+.radio-options input[type="radio"] {
+    width: auto;
+    margin: 5px; /* ラジオボタンの上下の余白を0に、左右の余白を3pxに設定 */
+}
+  
+/* ラベルに対するスタイル */
+.radio-options label {
+    margin-right: 10px; /* ラベルの右の余白を設定 */
+}
+
+/* 無効なラジオボタンのラベルに適用されるスタイル */
+.disabled {
+    color: #a9a9a9; /* 灰色に設定 */
+    text-decoration: line-through; /* 取り消し線を設定 */
+  }
