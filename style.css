@@ -103,3 +103,22 @@ body {
     color: #a9a9a9; /* 灰色に設定 */
     text-decoration: line-through; /* 取り消し線を設定 */
   }
+
+  #mainName {
+    font-weight: bold;
+    font-size: 32px;  /* You can adjust the size as needed */
+    color: white;
+    text-align: center;
+}
+
+#subName {
+    text-align: center;
+    font-size:24px;
+    color: white;
+}
+
+/* Optionally, if you want to style the divs containing these names */
+div#mainName, div#subName {
+    margin: auto;
+    background-color:sienna
+}
