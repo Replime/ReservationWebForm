@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var lastName = document.getElementById('lastName');
     var firstName = document.getElementById('firstName');
     var numberOfGuests = document.getElementById('numberOfGuests');
-    var scriptUrl = 'https://script.google.com/macros/s/AKfycbzOTlzsZC_tjOULf4IbWZkRez38msOuQmaVnjGOdnYjXtP85fDI8oE0UWwgrkdZrWIZbQ/exec';
+    var scriptUrl = 'https://script.google.com/macros/s/AKfycbxrRcB9FahbhyuyHSu3ZVdB8aSzAKwx2zRomd4x23yMNTdaqNhIy1ZQJCPH_dkWJqGkPg/exec';
   
     // 予約可能席数を超えた時刻のラジオボタンを無効にし、ラベルにスタイルを適用する関数
     function updateRadioButtons(availableSeats, reservedCounts, countSeats) {
@@ -29,15 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
         return response.json();
       })
       .then(function(jsonData) {
+        var mainName = jsonData.MainName;
+        var subName = jsonData.SubName;
         var countSeats = jsonData.CountSeats;
         var availableTime = jsonData.AvailableTime;
         var reservedCount = jsonData.ReservedCount.map(Number); // 文字列を数値に変換
         var arrivalTimeOptions = document.getElementById('arrivalTimeOptions');
 
-        // デバッグ情報をコンソールに出力
-        console.log("利用可能席数 (CountSeats):", countSeats);
-        console.log("各時刻の予約済み席数 (ReservedCount):", reservedCount);
-  
+        document.getElementById('mainName').textContent = mainName;
+        document.getElementById('subName').textContent = '～ ' + subName + ' ～';
+
         availableTime.forEach(function(time, index) {
           var radioContainer = document.createElement('div');
           radioContainer.classList.add('radio-container');
