@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const firstName = document.getElementById('firstName');
   const numberOfGuests = document.getElementById('numberOfGuests');
   const loadingIndicator = document.getElementById('loadingIndicator');
-  const scriptUrl = 'https://script.google.com/macros/s/AKfycbxrRcB9FahbhyuyHSu3ZVdB8aSzAKwx2zRomd4x23yMNTdaqNhIy1ZQJCPH_dkWJqGkPg/exec';
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbwzVFKh-HuaRXKIRjealItVfc1d3OdxrTi_HlvZPMt49tjh8JuyyP_r4b4lON0od8rYAQ/exec';
 
   const updateRadioButtons = (availableSeats, reservedCounts, countSeats) => {
       availableSeats.forEach((time, index) => {
