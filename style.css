@@ -6,7 +6,7 @@ body {
   }
   
   .form-container {
-    width: 100%;
+    width: 80%;
     margin: 2em auto;
     padding: 20px;
     background-color: #fff;
@@ -127,7 +127,7 @@ body {
 }
 
 /* Optionally, if you want to style the divs containing these names */
-div#mainName, div#subName, div#formTitle {
+div#TitleArea {
     margin: auto;
     background-color:#191970
 }
