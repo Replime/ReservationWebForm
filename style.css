@@ -107,6 +107,7 @@ body {
   #mainName {
     font-weight: bold;
     font-size: 32px;  /* You can adjust the size as needed */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
     text-align: center;
 }
@@ -114,11 +115,32 @@ body {
 #subName {
     text-align: center;
     font-size:24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
 }
 
 /* Optionally, if you want to style the divs containing these names */
 div#mainName, div#subName {
     margin: auto;
-    background-color:sienna
+    background-color:#191970
+}
+
+/* ローディングインジケータのスタイル */
+.loading-indicator {
+  display: none; /* 初期状態では非表示 */
+  position: fixed; /* 画面の中央に表示 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* センタリング */
+  font-size: 3em; /* テキストサイズ */
+  font-weight: bold;
+  color: #4a90e2; /* インジケータの色 */
+  opacity: 0; /* 初期状態のオパシティ */
+  transition: opacity 0.3s ease; /* オパシティのアニメーション */
+}
+
+/* ローディング中は表示 */
+.loading-indicator.show {
+  display: block;
+  opacity: 1; /* ローディング中のオパシティ */
 }
