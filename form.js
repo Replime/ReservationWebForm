@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const firstName = document.getElementById('firstName');
   const numberOfGuests = document.getElementById('numberOfGuests');
   const loadingIndicator = document.getElementById('loadingIndicator');
-  const scriptUrl = 'https://script.google.com/macros/s/AKfycbwzVFKh-HuaRXKIRjealItVfc1d3OdxrTi_HlvZPMt49tjh8JuyyP_r4b4lON0od8rYAQ/exec';
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbw_7NceilLEb3sZY2udIQ5OSOBpY_JwgznEzf-Zi1uYLbsTQkFhRF5ScJwwKH-HshNIKQ/exec';
 
   const updateRadioButtons = (availableSeats, reservedCounts, countSeats) => {
       availableSeats.forEach((time, index) => {
@@ -37,11 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return response.json();
       })
       .then(jsonData => {
-          const { MainName, SubName, CountSeats, AvailableTime, ReservedCount } = jsonData;
+          const { MainName, SubName, EventDate, CountSeats, AvailableTime, ReservedCount } = jsonData;
           const arrivalTimeOptions = document.getElementById('arrivalTimeOptions');
 
-          document.getElementById('mainName').textContent = MainName;
-          document.getElementById('subName').textContent = `～ ${SubName} ～`;
+          document.getElementById('mainName').textContent = `【会員制BAR】${MainName}`;
+          document.getElementById('subName').textContent = `${EventDate}  ${SubName}`;
+          document.getElementById('formTitle').textContent = `ご予約フォーム`;
 
           AvailableTime.forEach((time, index) => {
               const radioContainer = document.createElement('div');
