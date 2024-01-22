@@ -119,8 +119,15 @@ body {
     color: white;
 }
 
+#formTitle {
+  text-align: center;
+  font-size:24px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+}
+
 /* Optionally, if you want to style the divs containing these names */
-div#mainName, div#subName {
+div#mainName, div#subName, div#formTitle {
     margin: auto;
     background-color:#191970
 }
